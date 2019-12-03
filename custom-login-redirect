@@ -1,0 +1,7 @@
+/* 
+  *code below is to change default login redirect from my account page to custom page in wordpress
+*/
+add_filter( 'woocommerce_login_redirect', 'custom_login_redirect');
+function custom_login_redirect( $redirect ) {
+    return get_permalink( 'custom-page-id' );
+}
